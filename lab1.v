@@ -7,7 +7,9 @@ module lab1_main();
 	reg c0;
 	wire[2:0] s, s_gl;
 	wire c3, c3_gl;
-	rca_gl adder(c3_gl, s_gl, a, b, c0);
+	//choose one to find delay
+	//rca_gl adder(c3_gl, s_gl, a, b, c0);
+	//cla_gl adder(c3_gl, s_gl, a, b, c0);
 
 	// TODO:: Try to connect the module into our test bench
 	//?? adder_gl(c3_gl, s_gl, a, b, c0);
