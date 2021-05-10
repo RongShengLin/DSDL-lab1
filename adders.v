@@ -53,7 +53,7 @@ module cla_gl(
 	wire G0, G1, G2;
 	wire P0, P1, P2;
 	wire C1, C2;
-	wire P0C0, G0P1, C0P0P1, C0P0P1P2;
+	wire P0C0, G0P1, G1P2,  G0P1P2, C0P0P1, C0P0P1P2;
 	AND g0(G0 ,A[0], B[0]);
 	AND g1(G1, A[1], B[1]);
 	AND g2(G2, A[2], B[2]);
@@ -62,6 +62,8 @@ module cla_gl(
 	OR p2(P2, A[2], B[2]);
 	AND p0c0(P0C0, P0, C0);
 	AND g0p1(G0P1, G0, P1);
+	AND g1p2(G1P2, G1, P2);
+	AND4 g0p1p2(G0P1P2, 1, G0, P1, P2);
 	AND4 c0p0p1(C0P0P1, 1, C0, P0, P1);
 	AND4 c0p0p1p2(C0P0P1P2, C0, P0, P1, P2);
 	OR c1(C1, G0, P0C0);
